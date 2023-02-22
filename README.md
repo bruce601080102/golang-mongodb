@@ -22,4 +22,7 @@ go build -ldflags "-s -w" -o main *.go
 ./main
 ```
 
-![image](./vedio/demo.mov)
+
+
+https://user-images.githubusercontent.com/53620614/220694595-90fbd9ff-f028-47ed-a3cf-6d0a1650dafe.mov
+
