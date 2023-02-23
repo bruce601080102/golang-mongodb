@@ -56,17 +56,12 @@ func main() {
 				}
 			case status == 0:
 				times := argDB.Result.Times + 1
-				fmt.Println(times)
 				api.Update(times, argDB)
 				resmassage = fmt.Sprintf("已存入mongodb-來訪次數%d", times)
 			}
-
-			fmt.Println("userID:", userID)
 			if event.Type == linebot.EventTypeMessage {
 				switch message := event.Message.(type) {
 				case *linebot.TextMessage:
-					// resmassage := api.RecommandVtuber(message.Text)
-					fmt.Println("--->", message.Text)
 					if message.Text == "remove" {
 						api.Remove(argDB)
 						resmassage = "已刪除成功"
